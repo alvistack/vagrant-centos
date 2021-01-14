@@ -49,11 +49,11 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
 
 ## Versioning
 
-### `alvistack/centos-8:YYYYMMDD.Y.Z`
+### `YYYYMMDD.Y.Z`
 
 Release tags could be find from [GitHub Release](https://github.com/alvistack/vagrant-centos/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/centos-8:YYYYMMDD.0.0`
+### `YYYYMMDD.0.0`
 
 Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/vagrant-centos/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
