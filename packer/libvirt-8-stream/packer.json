@@ -20,7 +20,7 @@
       "headless": true,
       "http_directory": "./",
       "iso_checksum": "sha256:c166d15e439b3524334148e30e2f4e7d848fe3e11ed6ac7d031d5e573eee3b84",
-      "iso_url": "https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20201211-boot.iso",
+      "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210120-boot.iso",
       "memory": 4096,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
