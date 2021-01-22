@@ -14,7 +14,7 @@
       "guest_os_type": "RedHat_64",
       "headless": true,
       "http_directory": "./",
-      "iso_checksum": "sha256:c166d15e439b3524334148e30e2f4e7d848fe3e11ed6ac7d031d5e573eee3b84",
+      "iso_checksum": "sha256:60ff58aa83154e59327e79db0968cdaf41b0bf9e096f1a8a3e2f97a6fe3c3691",
       "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210120-boot.iso",
       "memory": 4096,
       "ssh_password": "vagrant",
