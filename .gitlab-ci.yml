@@ -155,31 +155,6 @@ deploy:libvirt-8-stream:
   needs:
     - build:libvirt-8-stream
 
-build:libvirt-8:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-libvirt-8"
-    paths:
-      - packer/*/output-vagrant/*.box
-  variables:
-    _PACKER_BUILDER_PROVIDER: "libvirt"
-    _PACKER_BUILDER_VERSION: "8"
-
-deploy:libvirt-8:
-  <<: *job-vagrant-cloud-provider-upload
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-libvirt-8"
-    paths:
-      - packer/*/output-vagrant/*.box
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "libvirt"
-    _PACKER_BUILDER_VERSION: "8"
-  needs:
-    - build:libvirt-8
-
 build:libvirt-7:
   <<: *job-packer-build
   stage: build
@@ -229,31 +204,6 @@ deploy:virtualbox-8-stream:
     _PACKER_BUILDER_VERSION: "8-stream"
   needs:
     - build:virtualbox-8-stream
-
-build:virtualbox-8:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-virtualbox-8"
-    paths:
-      - packer/*/output-vagrant/*.box
-  variables:
-    _PACKER_BUILDER_PROVIDER: "virtualbox"
-    _PACKER_BUILDER_VERSION: "8"
-
-deploy:virtualbox-8:
-  <<: *job-vagrant-cloud-provider-upload
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-virtualbox-8"
-    paths:
-      - packer/*/output-vagrant/*.box
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "virtualbox"
-    _PACKER_BUILDER_VERSION: "8"
-  needs:
-    - build:virtualbox-8
 
 build:virtualbox-7:
   <<: *job-packer-build

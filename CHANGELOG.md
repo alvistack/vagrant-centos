@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Remove CentOS 8 support
+
 ## 20210116.1.0 - 2021-01-16
 
 ### Major Changes
