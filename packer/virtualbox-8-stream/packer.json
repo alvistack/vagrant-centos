@@ -17,6 +17,7 @@
       "iso_checksum": "sha256:1d50e3028377cc084c63806bfc27c518f94395973d68e5714412a90f53beebcf",
       "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210223-boot.iso",
       "memory": 4096,
+      "shutdown_command": "sudo shutdown -h now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_timeout": "3600s",
