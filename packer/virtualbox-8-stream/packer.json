@@ -14,7 +14,7 @@
       "guest_os_type": "RedHat_64",
       "headless": true,
       "http_directory": "./",
-      "iso_checksum": "sha256:a14e36c4fbe6f9c8cf2386670935503ca0deb6de2ac0f9829947fa2fefa57c5d",
+      "iso_checksum": "sha256:1cd7303e55be201b60f21f88a65022958424ef847898afb2698532e177a27403",
       "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210406-boot.iso",
       "memory": 4096,
       "shutdown_command": "sudo shutdown -h now",
