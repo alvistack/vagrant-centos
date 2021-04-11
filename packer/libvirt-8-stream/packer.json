@@ -19,8 +19,8 @@
       "format": "qcow2",
       "headless": true,
       "http_directory": "./",
-      "iso_checksum": "sha256:5c530f1e372f774723b6921f0a3f6eb237dbd40f251a7e7cf6edcef89bb539e2",
-      "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210402-boot.iso",
+      "iso_checksum": "sha256:1cd7303e55be201b60f21f88a65022958424ef847898afb2698532e177a27403",
+      "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210406-boot.iso",
       "memory": 4096,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
@@ -30,7 +30,9 @@
       "ssh_timeout": "3600s",
       "ssh_username": "vagrant",
       "type": "qemu",
-      "vnc_bind_address": "0.0.0.0"
+      "vnc_bind_address": "0.0.0.0",
+      "vnc_port_max": 6000,
+      "vnc_port_min": 5900
     }
   ],
   "post-processors": [
