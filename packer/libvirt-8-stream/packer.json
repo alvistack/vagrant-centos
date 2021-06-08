@@ -40,7 +40,7 @@
       "http_directory": "./",
       "iso_checksum": "6d957521b4488fc44bb80bdcb618bc1cf9891a997fdbd94e22424c14a356cf09",
       "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210603-boot.iso",
-      "memory": 4096,
+      "memory": 8192,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
       "shutdown_command": "sudo shutdown -h now",
