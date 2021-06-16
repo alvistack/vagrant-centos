@@ -4,7 +4,9 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/blob/master/LICENSE)
 [![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fcentos-8-stream&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fcentos-8-stream)](https://app.vagrantup.com/alvistack/boxes/centos-8-stream)
+
 CentOS (from Community Enterprise Operating System) was a Linux distribution that provided a free, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL). In January 2014, CentOS announced the official joining with Red Hat while staying independent from RHEL, under a new CentOS governing board.
+
 Learn more about CentOS: <https://centos.org/>
 
 ## Supported Boxes and Respective Packer Template Links
@@ -31,14 +33,18 @@ Learn more about CentOS: <https://centos.org/>
 ### Quick Start
 
 Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [VirtaulBox](https://www.virtualbox.org/) installed, run the following commands under your [project directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
-\# Initialize Vagrant
-vagrant init alvistack/centos-8
-\# Start the virtual machine
-vagrant up
-\# SSH into this machine
-vagrant ssh
-\# Terminate the virtual machine
-vagrant destroy --force
+
+    # Initialize Vagrant
+    vagrant init alvistack/centos-8
+    
+    # Start the virtual machine
+    vagrant up
+    
+    # SSH into this machine
+    vagrant ssh
+    
+    # Terminate the virtual machine
+    vagrant destroy --force
 
 ## Versioning
 
