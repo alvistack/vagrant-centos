@@ -218,7 +218,7 @@ deploy:libvirt-7:
   needs:
     - build:libvirt-7
 
-build:virtualbox-8-stream:
+test:virtualbox-8-stream:
   <<: *job-packer-build
   stage: build
   cache:
@@ -241,9 +241,9 @@ deploy:virtualbox-8-stream:
     _PACKER_BUILDER_PROVIDER: "virtualbox"
     _PACKER_BUILDER_VERSION: "8-stream"
   needs:
-    - build:virtualbox-8-stream
+    - test:virtualbox-8-stream
 
-build:virtualbox-7:
+test:virtualbox-7:
   <<: *job-packer-build
   stage: build
   cache:
@@ -266,4 +266,4 @@ deploy:virtualbox-7:
     _PACKER_BUILDER_PROVIDER: "virtualbox"
     _PACKER_BUILDER_VERSION: "7"
   needs:
-    - build:virtualbox-7
+    - test:virtualbox-7
