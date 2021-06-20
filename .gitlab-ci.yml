@@ -220,7 +220,7 @@ deploy:libvirt-7:
 
 test:virtualbox-8-stream:
   <<: *job-packer-build
-  stage: build
+  stage: test
   cache:
     key: "$CI_PIPELINE_ID-virtualbox-8-stream"
     paths:
@@ -245,7 +245,7 @@ deploy:virtualbox-8-stream:
 
 test:virtualbox-7:
   <<: *job-packer-build
-  stage: build
+  stage: test
   cache:
     key: "$CI_PIPELINE_ID-virtualbox-7"
     paths:
