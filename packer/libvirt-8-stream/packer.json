@@ -39,7 +39,7 @@
       "headless": true,
       "http_directory": "./",
       "iso_checksum": "none",
-      "iso_url": "http://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso",
+      "iso_url": "https://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso",
       "memory": 8192,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
