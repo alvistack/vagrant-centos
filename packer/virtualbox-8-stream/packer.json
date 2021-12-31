@@ -35,7 +35,7 @@
       "http_directory": "./",
       "iso_checksum": "none",
       "iso_url": "https://ftp.osuosl.org/pub/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso",
-      "memory": 8192,
+      "memory": 16384,
       "shutdown_command": "sudo shutdown -h now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
