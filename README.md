@@ -13,6 +13,9 @@ Learn more about CentOS: <https://centos.org/>
 
 ## Supported Boxes and Respective Packer Template Links
 
+  - [`alvistack/centos-9-stream`](https://app.vagrantup.com/alvistack/boxes/centos-9-stream)
+      - [`packer/libvirt-9-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/libvirt-9-stream/packer.json)
+      - [`packer/virtualbox-9-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/virtualbox-9-stream/packer.json)
   - [`alvistack/centos-8-stream`](https://app.vagrantup.com/alvistack/boxes/centos-8-stream)
       - [`packer/libvirt-8-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/libvirt-8-stream/packer.json)
       - [`packer/virtualbox-8-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/virtualbox-8-stream/packer.json)

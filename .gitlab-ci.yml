@@ -167,6 +167,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:libvirt-9-stream:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-libvirt-9-stream"
+    paths:
+      - packer/*/output-vagrant
+  variables:
+    _PACKER_BUILDER_PROVIDER: "libvirt"
+    _PACKER_BUILDER_VERSION: "9-stream"
+
+deploy:libvirt-9-stream:
+  <<: *job-vagrant-cloud-provider-upload
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-libvirt-9-stream"
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "libvirt"
+    _PACKER_BUILDER_VERSION: "9-stream"
+  needs:
+    - build:libvirt-9-stream
+
 build:libvirt-8-stream:
   <<: *job-packer-build
   stage: build
@@ -216,6 +241,31 @@ deploy:libvirt-7:
     _PACKER_BUILDER_VERSION: "7"
   needs:
     - build:libvirt-7
+
+test:virtualbox-9-stream:
+  <<: *job-packer-build
+  stage: test
+  cache:
+    key: "$CI_PIPELINE_ID-virtualbox-9-stream"
+    paths:
+      - packer/*/output-vagrant
+  variables:
+    _PACKER_BUILDER_PROVIDER: "virtualbox"
+    _PACKER_BUILDER_VERSION: "9-stream"
+
+deploy:virtualbox-9-stream:
+  <<: *job-vagrant-cloud-provider-upload
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-virtualbox-9-stream"
+    paths:
+      - packer/*/output-vagrant
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "virtualbox"
+    _PACKER_BUILDER_VERSION: "9-stream"
+  needs:
+    - test:virtualbox-9-stream
 
 test:virtualbox-8-stream:
   <<: *job-packer-build
