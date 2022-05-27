@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/vagrant-centos/master)](https://gitlab.com/alvistack/vagrant-centos/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/blob/master/LICENSE)
-[![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fcentos-8-stream&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fcentos-8-stream)](https://app.vagrantup.com/alvistack/boxes/centos-8-stream)
+[![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fcentos-9-stream&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fcentos-9-stream)](https://app.vagrantup.com/alvistack/boxes/centos-9-stream)
 
 CentOS (from Community Enterprise Operating System) was a Linux distribution that provided a free, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL). In January 2014, CentOS announced the official joining with Red Hat while staying independent from RHEL, under a new CentOS governing board.
 
@@ -40,7 +40,7 @@ Learn more about CentOS: <https://centos.org/>
 Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [VirtaulBox](https://www.virtualbox.org/) installed, run the following commands under your [project directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
 
     # Initialize Vagrant
-    vagrant init alvistack/centos-8
+    vagrant init alvistack/centos-9-stream
     
     # Start the virtual machine
     vagrant up
@@ -50,6 +50,15 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
     
     # Terminate the virtual machine
     vagrant destroy --force
+
+### Molecule
+
+You could also run our [Molecule](https://molecule.readthedocs.io/en/stable/) test cases if you have [Vagrant](https://www.vagrantup.com/) and [Libvirt](https://libvirt.org/) installed, e.g.
+
+    # Run Molecule on CentOS 9 Stream
+    molecule converge -s libvirt-9-stream
+
+Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on running Molecule.
 
 ## Versioning
 
