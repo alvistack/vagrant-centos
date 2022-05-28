@@ -14,14 +14,14 @@ Learn more about CentOS: <https://centos.org/>
 ## Supported Boxes and Respective Packer Template Links
 
   - [`alvistack/centos-9-stream`](https://app.vagrantup.com/alvistack/boxes/centos-9-stream)
-      - [`packer/libvirt-9-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/libvirt-9-stream/packer.json)
-      - [`packer/virtualbox-9-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/virtualbox-9-stream/packer.json)
+      - [`packer/centos-9-stream-libvirt/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-9-stream-libvirt/packer.json)
+      - [`packer/centos-9-stream-virtualbox/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-9-stream-virtualbox/packer.json)
   - [`alvistack/centos-8-stream`](https://app.vagrantup.com/alvistack/boxes/centos-8-stream)
-      - [`packer/libvirt-8-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/libvirt-8-stream/packer.json)
-      - [`packer/virtualbox-8-stream/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/virtualbox-8-stream/packer.json)
+      - [`packer/centos-8-stream-libvirt/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-8-stream-libvirt/packer.json)
+      - [`packer/centos-8-stream-virtualbox/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-8-stream-virtualbox/packer.json)
   - [`alvistack/centos-7`](https://app.vagrantup.com/alvistack/boxes/centos-7)
-      - [`packer/libvirt-7/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/libvirt-7/packer.json)
-      - [`packer/virtualbox-7/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/virtualbox-7/packer.json)
+      - [`packer/centos-7-libvirt/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-7-libvirt/packer.json)
+      - [`packer/centos-7-virtualbox/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-7-virtualbox/packer.json)
 
 ## Overview
 
@@ -56,7 +56,7 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
 You could also run our [Molecule](https://molecule.readthedocs.io/en/stable/) test cases if you have [Vagrant](https://www.vagrantup.com/) and [Libvirt](https://libvirt.org/) installed, e.g.
 
     # Run Molecule on CentOS 9 Stream
-    molecule converge -s libvirt-9-stream
+    molecule converge -s centos-9-stream-libvirt
 
 Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on running Molecule.
 
