@@ -248,6 +248,8 @@ build:centos-9-stream-virtualbox:
   variables:
     _BOX: "centos-9-stream"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:centos-9-stream-virtualbox:
   <<: *job-molecule-test
@@ -262,6 +264,8 @@ test:centos-9-stream-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:centos-9-stream-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:centos-9-stream-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -276,6 +280,8 @@ deploy:centos-9-stream-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:centos-9-stream-virtualbox
+  allow_failure: true
+  retry: 0
 
 build:centos-8-stream-libvirt:
   <<: *job-packer-build
@@ -326,6 +332,8 @@ build:centos-8-stream-virtualbox:
   variables:
     _BOX: "centos-8-stream"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:centos-8-stream-virtualbox:
   <<: *job-molecule-test
@@ -340,6 +348,8 @@ test:centos-8-stream-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:centos-8-stream-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:centos-8-stream-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -354,6 +364,8 @@ deploy:centos-8-stream-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:centos-8-stream-virtualbox
+  allow_failure: true
+  retry: 0
 
 build:centos-7-libvirt:
   <<: *job-packer-build
@@ -404,6 +416,8 @@ build:centos-7-virtualbox:
   variables:
     _BOX: "centos-7"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:centos-7-virtualbox:
   <<: *job-molecule-test
@@ -418,6 +432,8 @@ test:centos-7-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:centos-7-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:centos-7-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -432,3 +448,5 @@ deploy:centos-7-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:centos-7-virtualbox
+  allow_failure: true
+  retry: 0
