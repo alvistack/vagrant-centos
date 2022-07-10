@@ -1,6 +1,6 @@
 # Vagrant Box Packaging for CentOS
 
-<img src="/alvistack.svg" width="75" alt="AlviStack">
+<a href="https://alvistack.com" title="AlviStack" target="_blank"><img src="/alvistack.svg" height="75" alt="AlviStack"></a>
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/vagrant-centos/master)](https://gitlab.com/alvistack/vagrant-centos/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/tags)
