@@ -15,7 +15,7 @@
 # limitations under the License.
 
 namespace: alvistack
-name: vagrant-centos
+name: centos
 description: Vagrant Box Packaging for CentOS
 
 version: 0.0.0
