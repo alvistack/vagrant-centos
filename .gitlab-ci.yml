@@ -248,7 +248,6 @@ build:centos-9-stream-virtualbox:
   variables:
     _BOX: "centos-9-stream"
     _PROVIDER: "virtualbox"
-  allow_failure: true
   retry: 0
 
 test:centos-9-stream-virtualbox:
@@ -328,7 +327,6 @@ build:centos-8-stream-virtualbox:
   variables:
     _BOX: "centos-8-stream"
     _PROVIDER: "virtualbox"
-  allow_failure: true
   retry: 0
 
 test:centos-8-stream-virtualbox:
@@ -408,7 +406,6 @@ build:centos-7-virtualbox:
   variables:
     _BOX: "centos-7"
     _PROVIDER: "virtualbox"
-  allow_failure: true
   retry: 0
 
 test:centos-7-virtualbox:
