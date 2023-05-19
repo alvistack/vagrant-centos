@@ -248,7 +248,8 @@ build:centos-9-stream-virtualbox:
   variables:
     _BOX: "centos-9-stream"
     _PROVIDER: "virtualbox"
-  retry: 0
+  needs:
+    - build:centos-9-stream-libvirt
 
 test:centos-9-stream-virtualbox:
   <<: *job-molecule-test
@@ -327,7 +328,8 @@ build:centos-8-stream-virtualbox:
   variables:
     _BOX: "centos-8-stream"
     _PROVIDER: "virtualbox"
-  retry: 0
+  needs:
+    - build:centos-8-stream-libvirt
 
 test:centos-8-stream-virtualbox:
   <<: *job-molecule-test
@@ -406,7 +408,8 @@ build:centos-7-virtualbox:
   variables:
     _BOX: "centos-7"
     _PROVIDER: "virtualbox"
-  retry: 0
+  needs:
+    - build:centos-7-libvirt
 
 test:centos-7-virtualbox:
   <<: *job-molecule-test
