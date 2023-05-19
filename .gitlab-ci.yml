@@ -249,7 +249,7 @@ build:centos-9-stream-virtualbox:
     _BOX: "centos-9-stream"
     _PROVIDER: "virtualbox"
   needs:
-    - build:centos-9-stream-libvirt
+    - deploy:centos-9-stream-libvirt
 
 test:centos-9-stream-virtualbox:
   <<: *job-molecule-test
@@ -329,7 +329,7 @@ build:centos-8-stream-virtualbox:
     _BOX: "centos-8-stream"
     _PROVIDER: "virtualbox"
   needs:
-    - build:centos-8-stream-libvirt
+    - deploy:centos-8-stream-libvirt
 
 test:centos-8-stream-virtualbox:
   <<: *job-molecule-test
@@ -409,7 +409,7 @@ build:centos-7-virtualbox:
     _BOX: "centos-7"
     _PROVIDER: "virtualbox"
   needs:
-    - build:centos-7-libvirt
+    - deploy:centos-7-libvirt
 
 test:centos-7-virtualbox:
   <<: *job-molecule-test
