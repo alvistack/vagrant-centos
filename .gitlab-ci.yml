@@ -203,24 +203,24 @@ build:centos-9-stream-libvirt:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-9-stream-libvirt
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-9-stream
+    _PROVIDER: libvirt
 
 test:centos-9-stream-libvirt:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-9-stream-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-9-stream
+    _PROVIDER: libvirt
   needs:
     - build:centos-9-stream-libvirt
 
@@ -228,13 +228,13 @@ deploy:centos-9-stream-libvirt:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-9-stream-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-9-stream
+    _PROVIDER: libvirt
   needs:
     - test:centos-9-stream-libvirt
 
@@ -242,12 +242,12 @@ build:centos-9-stream-virtualbox:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-9-stream-virtualbox
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-9-stream
+    _PROVIDER: virtualbox
   needs:
     - build:centos-9-stream-libvirt
 
@@ -255,13 +255,13 @@ test:centos-9-stream-virtualbox:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-9-stream-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-9-stream
+    _PROVIDER: virtualbox
   needs:
     - build:centos-9-stream-virtualbox
 
@@ -269,13 +269,13 @@ deploy:centos-9-stream-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-9-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-9-stream-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-9-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-9-stream
+    _PROVIDER: virtualbox
   needs:
     - test:centos-9-stream-virtualbox
 
@@ -283,24 +283,24 @@ build:centos-8-stream-libvirt:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-8-stream-libvirt
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-8-stream
+    _PROVIDER: libvirt
 
 test:centos-8-stream-libvirt:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-8-stream-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-8-stream
+    _PROVIDER: libvirt
   needs:
     - build:centos-8-stream-libvirt
 
@@ -308,13 +308,13 @@ deploy:centos-8-stream-libvirt:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-libvirt"
+    key: $CI_PIPELINE_ID-centos-8-stream-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "libvirt"
+    _BOX: centos-8-stream
+    _PROVIDER: libvirt
   needs:
     - test:centos-8-stream-libvirt
 
@@ -322,12 +322,12 @@ build:centos-8-stream-virtualbox:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-8-stream-virtualbox
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-8-stream
+    _PROVIDER: virtualbox
   needs:
     - build:centos-8-stream-libvirt
 
@@ -335,13 +335,13 @@ test:centos-8-stream-virtualbox:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-8-stream-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-8-stream
+    _PROVIDER: virtualbox
   needs:
     - build:centos-8-stream-virtualbox
 
@@ -349,13 +349,13 @@ deploy:centos-8-stream-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-8-stream-virtualbox"
+    key: $CI_PIPELINE_ID-centos-8-stream-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-8-stream"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-8-stream
+    _PROVIDER: virtualbox
   needs:
     - test:centos-8-stream-virtualbox
 
@@ -363,24 +363,24 @@ build:centos-7-libvirt:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-libvirt"
+    key: $CI_PIPELINE_ID-centos-7-libvirt
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "libvirt"
+    _BOX: centos-7
+    _PROVIDER: libvirt
 
 test:centos-7-libvirt:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-libvirt"
+    key: $CI_PIPELINE_ID-centos-7-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "libvirt"
+    _BOX: centos-7
+    _PROVIDER: libvirt
   needs:
     - build:centos-7-libvirt
 
@@ -388,13 +388,13 @@ deploy:centos-7-libvirt:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-libvirt"
+    key: $CI_PIPELINE_ID-centos-7-libvirt
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "libvirt"
+    _BOX: centos-7
+    _PROVIDER: libvirt
   needs:
     - test:centos-7-libvirt
 
@@ -402,12 +402,12 @@ build:centos-7-virtualbox:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-virtualbox"
+    key: $CI_PIPELINE_ID-centos-7-virtualbox
     paths:
       - packer/*/output-vagrant
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-7
+    _PROVIDER: virtualbox
   needs:
     - build:centos-7-libvirt
 
@@ -415,13 +415,13 @@ test:centos-7-virtualbox:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-virtualbox"
+    key: $CI_PIPELINE_ID-centos-7-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-7
+    _PROVIDER: virtualbox
   needs:
     - build:centos-7-virtualbox
 
@@ -429,12 +429,12 @@ deploy:centos-7-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-centos-7-virtualbox"
+    key: $CI_PIPELINE_ID-centos-7-virtualbox
     paths:
       - packer/*/output-vagrant
     policy: pull
   variables:
-    _BOX: "centos-7"
-    _PROVIDER: "virtualbox"
+    _BOX: centos-7
+    _PROVIDER: virtualbox
   needs:
     - test:centos-7-virtualbox
