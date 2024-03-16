@@ -87,6 +87,16 @@
   ],
   "provisioners": [
     {
+      "inline": [
+        "set -eu",
+        "sudo yum makecache",
+        "sudo yum update -y",
+        "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y qemu-guest-agent"
+      ],
+      "type": "shell"
+    },
+    {
       "galaxy_file": "./ansible-galaxy-requirements.yml",
       "inventory_directory": "./",
       "playbook_file": "./packer.yml",
