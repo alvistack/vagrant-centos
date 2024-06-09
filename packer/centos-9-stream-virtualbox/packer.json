@@ -35,7 +35,7 @@
       "headless": true,
       "http_directory": "./",
       "iso_checksum": "none",
-      "iso_url": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-boot.iso",
+      "iso_url": "https://ftp.osuosl.org/pub/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-boot.iso",
       "memory": 16384,
       "shutdown_command": "sudo shutdown -h now",
       "ssh_password": "vagrant",
