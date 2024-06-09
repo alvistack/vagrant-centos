@@ -39,7 +39,7 @@
       "headless": true,
       "http_directory": "./",
       "iso_checksum": "e33d7b1ea7a9e2f38c8f693215dd85254c3a4fe446f93f563279715b68d07987",
-      "iso_url": "http://vault.centos.org/pub/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso",
+      "iso_url": "http://vault.centos.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso",
       "memory": 16384,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
@@ -89,6 +89,7 @@
     {
       "inline": [
         "set -eu",
+        "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf",
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",

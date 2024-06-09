@@ -89,9 +89,13 @@
     {
       "inline": [
         "set -eu",
+        "sudo find /etc/yum.repos.d -type f | xargs sudo sed -i 's?^mirrorlist?#mirrorlist?g'",
+        "sudo find /etc/yum.repos.d -type f | xargs sudo sed -i 's?^#baseurl=http://mirror.centos.org?baseurl=http://vault.centos.org?g'",
+        "echo 'zchunk=False' | sudo tee -a /etc/dnf/dnf.conf",
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y --allowerasing coreutils",
         "sudo yum install -y qemu-guest-agent"
       ],
       "type": "shell"
