@@ -89,7 +89,7 @@
     {
       "inline": [
         "set -eu",
-        "sudo chmod o+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
+        "sudo chmod u+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
         "sudo find /etc/yum.repos.d -type f | xargs sudo sed -i 's?^mirrorlist?#mirrorlist?g'",
         "sudo find /etc/yum.repos.d -type f | xargs sudo sed -i 's?^#baseurl=http://mirror.centos.org?baseurl=http://vault.centos.org?g'",
         "echo 'zchunk=False' | sudo tee -a /etc/dnf/dnf.conf",
