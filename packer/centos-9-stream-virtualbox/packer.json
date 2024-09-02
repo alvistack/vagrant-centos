@@ -97,6 +97,7 @@
     {
       "inline": [
         "set -eu",
+        "sudo chmod o+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
         "echo 'zchunk=False' | sudo tee -a /etc/dnf/dnf.conf",
         "sudo yum makecache",
         "sudo yum update -y",
