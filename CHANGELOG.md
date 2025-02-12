@@ -2,6 +2,7 @@
 
 ## YYYYMMDD.Y.Z - TBC
 
+- Support CentOS 10 Stream
 - Replace with `ansible.builtin.deb822_repository`
 - Support Ansible community package 11.1.0
 - Support Ansible community package 11.0.0
