@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "centos-9-stream"
-  config.vm.box = "alvistack/centos-9-stream"
+  config.vm.hostname = "centos-10-stream"
+  config.vm.box = "alvistack/centos-10-stream"
   config.vm.box_check_update = true
 
   config.vm.provider :virtualbox do |virtualbox, override|
