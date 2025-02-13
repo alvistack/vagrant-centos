@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/vagrant-centos.svg)](https://gi
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/vagrant-centos.svg)](https://github.com/alvistack/vagrant-centos/blob/master/LICENSE)
 [![Vagrant Box
-download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fcentos-9-stream&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fcentos-9-stream)](https://app.vagrantup.com/alvistack/boxes/centos-9-stream)
+download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Fcentos-10-stream&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Fcentos-10-stream)](https://app.vagrantup.com/alvistack/boxes/centos-10-stream)
 
 CentOS (from Community Enterprise Operating System) was a Linux
 distribution that provided a free, community-supported computing
@@ -22,6 +22,9 @@ Learn more about CentOS: <https://centos.org/>
 
 ## Supported Boxes and Respective Packer Template Links
 
+- [`alvistack/centos-10-stream`](https://app.vagrantup.com/alvistack/boxes/centos-10-stream)
+  - [`packer/centos-10-stream-libvirt/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-10-stream-libvirt/packer.json)
+  - [`packer/centos-10-stream-virtualbox/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-10-stream-virtualbox/packer.json)
 - [`alvistack/centos-9-stream`](https://app.vagrantup.com/alvistack/boxes/centos-9-stream)
   - [`packer/centos-9-stream-libvirt/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-9-stream-libvirt/packer.json)
   - [`packer/centos-9-stream-virtualbox/packer.json`](https://github.com/alvistack/vagrant-centos/blob/master/packer/centos-9-stream-virtualbox/packer.json)
@@ -57,7 +60,7 @@ commands under your [project
 directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
 
     # Initialize Vagrant
-    vagrant init alvistack/centos-9-stream
+    vagrant init alvistack/centos-10-stream
 
     # Start the virtual machine
     vagrant up
@@ -76,7 +79,7 @@ have [Vagrant](https://www.vagrantup.com/) and
 [Libvirt](https://libvirt.org/) installed, e.g.
 
     # Run Molecule on CentOS 9 Stream
-    molecule converge -s centos-9-stream-libvirt
+    molecule converge -s centos-10-stream-libvirt
 
 Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on
 running Molecule.
